@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAA Project</title>
+    <title>Greedy Algorithm Simulator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>THE GREEDY ALGO</h1>
-    <p>Explore and visualize greedy algorithms for optimization problems</p>
+    <h1>Greedy Algorithm Simulator</h1>
+    <p>Explore and visualize greedy optimization techniques</p>
 </header>
 
 <div class="main-content">
-    <div class="container">
+    <div class="pane left">
         <div class="hero-section" id="heroSection">
-            <h2>🚀 Explore Greedy Algorithms</h2>
-            <p>Interactive simulator for NP-hard optimization problems</p>
+            <h2>Explore Greedy Algorithms</h2>
+            <p>Educational simulator for optimization problems</p>
             <div class="stats">
                 <div class="stat">
                     <span class="stat-number">3</span>
@@ -28,30 +28,29 @@
                 </div>
                 <div class="stat">
                     <span class="stat-number">∞</span>
-                    <span class="stat-label">Possibilities</span>
+                    <span class="stat-label">Possible Cases</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">🎓</span>
+                    <span class="stat-number">📘</span>
                     <span class="stat-label">Learning</span>
                 </div>
             </div>
             <div class="interactive-elements">
                 <button class="explore-btn" onclick="document.getElementById('algorithm').focus()">Start Exploring</button>
-                <div class="floating-icons">
-                    <span class="float-icon">📦</span>
-                    <span class="float-icon">🎒</span>
-                    <span class="float-icon">🗺️</span>
-                </div>
+                
             </div>
         </div>
 
+        <div id="algoInfo" class="algo-info">
+            <p>Select an algorithm to view details.</p>
+        </div>
         <div class="algorithm-selector">
             <label for="algorithm">Choose Your Algorithm:</label>
             <select id="algorithm">
                 <option value="">--Choose--</option>
-                <option value="binpacking">📦 Bin Packing</option>
-                <option value="knapsack01">🎒 0/1 Knapsack</option>
-                <option value="tsp">🗺️ TSP (Traveling Salesman)</option>
+                <option value="binpacking">Bin Packing</option>
+                <option value="knapsack01">0/1 Knapsack</option>
+                <option value="tsp">TSP (Traveling Salesman)</option>
             </select>
         </div>
 
@@ -64,15 +63,11 @@
             <button id="resetBtn" onclick="reset()">Reset</button>
         </div>
 
+        <div id="steps" class="output steps-output"></div>
+    </div>
+    <div class="pane right">
         <div id="output" class="output"></div>
     </div>
-
-    <aside id="sidebar" class="sidebar">
-        <h3>Algorithm Information</h3>
-        <div id="algoInfo">
-            <p>Select an algorithm to view details.</p>
-        </div>
-    </aside>
 </div>
 
 <div id="errorModal" class="error-modal">
@@ -83,9 +78,9 @@
 </div>
 
 <footer>
-    <p>&copy; DAA LAB Project - Greedy Algorithm Simulator || Let's make it easyyyyy</p>
+    <p>&copy; 2026 Greedy Algorithm Simulator - Design & Analysis of Algorithms</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="../script.js/script.js"></script>
 </body>
 </html>
