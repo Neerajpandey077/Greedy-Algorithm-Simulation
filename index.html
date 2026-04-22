@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,65 +6,77 @@
     <title>Greedy Algorithm Simulator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>Greedy Algorithm Simulator</h1>
-    <p>Explore and visualize greedy optimization techniques</p>
+    <div class="header-content">
+        <h1>Greedy Algorithm Simulator</h1>
+        <p>Interactive visualization and analysis of optimization algorithms</p>
+    </div>
 </header>
 
 <div class="main-content">
     <div class="pane left">
         <div class="hero-section" id="heroSection">
-            <h2>Explore Greedy Algorithms</h2>
-            <p>Educational simulator for optimization problems</p>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">3</span>
-                    <span class="stat-label">Algorithms</span>
+            <h2>Algorithm Selection</h2>
+            <p>Choose one of three optimization algorithms to explore</p>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>Bin Packing</h4>
+                    <p>Efficiently pack items into bins with capacity constraints</p>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">∞</span>
-                    <span class="stat-label">Possible Cases</span>
+                <div class="feature-item">
+                    <h4>0/1 Knapsack</h4>
+                    <p>Maximize value while staying within weight limits</p>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">📘</span>
-                    <span class="stat-label">Learning</span>
+                <div class="feature-item">
+                    <h4>Traveling Salesman</h4>
+                    <p>Find the shortest route visiting all cities once</p>
                 </div>
             </div>
-            <div class="interactive-elements">
-                <button class="explore-btn" onclick="document.getElementById('algorithm').focus()">Start Exploring</button>
-                
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-name">Algorithms</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">Unlimited</div>
+                    <div class="stat-name">Test Cases</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">Real-time</div>
+                    <div class="stat-name">Visualization</div>
+                </div>
             </div>
         </div>
 
         <div id="algoInfo" class="algo-info">
-            <p>Select an algorithm to view details.</p>
+            <p>Select an algorithm to view details and begin.</p>
         </div>
+
         <div class="algorithm-selector">
-            <label for="algorithm">Choose Your Algorithm:</label>
+            <label for="algorithm">Select Algorithm</label>
             <select id="algorithm">
-                <option value="">--Choose--</option>
+                <option value="">-- Choose an algorithm --</option>
                 <option value="binpacking">Bin Packing</option>
                 <option value="knapsack01">0/1 Knapsack</option>
-                <option value="tsp">TSP (Traveling Salesman)</option>
+                <option value="tsp">Traveling Salesman Problem</option>
             </select>
         </div>
 
-        <div id="inputs" class="inputs">
-            <!-- Inputs will be dynamically shown here -->
-        </div>
+        <div id="inputs" class="inputs"></div>
 
-        <div class="buttons">
-            <button id="runBtn" onclick="run()">Run Algorithm</button>
-            <button id="resetBtn" onclick="reset()">Reset</button>
+        <div class="button-group">
+            <button id="runBtn" class="btn-primary" onclick="run()">Run Algorithm</button>
+            <button id="resetBtn" class="btn-secondary" onclick="reset()">Reset</button>
         </div>
 
         <div id="steps" class="output steps-output"></div>
     </div>
+
     <div class="pane right">
         <div id="output" class="output"></div>
     </div>
@@ -73,12 +85,12 @@
 <div id="errorModal" class="error-modal">
     <div class="error-content">
         <span id="errorMessage"></span>
-        <button id="closeError">×</button>
+        <button id="closeError" class="close-btn">×</button>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Greedy Algorithm Simulator - Design & Analysis of Algorithms</p>
+    <p>&copy; 2026 Greedy Algorithm Simulator</p>
 </footer>
 
 <script src="../script.js/script.js"></script>
